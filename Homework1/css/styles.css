@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #757575;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #757575;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+
+.navbar a {
+    padding: 8px;
+    margin: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid #ffffff;
+}
+
+
+.navbar a:hover {
+    background-color: #00959e;
+}
+
+.header span {
+    font-size: 50px;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    padding: 2px;
+}
+
+.homeText {
+    width: 500px;
+    margin-top: 100px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 8px;
+}
+
+#phpTable {
+    margin: 0 auto;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    max-width: 1000px;
+}
+
+#phpTableImage {
+    margin-right: 100px;
+}
+
+#phpTableName {
+    padding: 0 0 0 100px;
+}
+
+img {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
