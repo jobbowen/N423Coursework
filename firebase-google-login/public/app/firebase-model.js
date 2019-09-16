@@ -14,9 +14,15 @@ var FIREBASE_MODEL = (function() {
     firebase.auth().onAuthStateChanged(authStateObserver);
   }
 
+  let _signinWithGoogle = function() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider);
+  };
+
   initFirebaseAuth();
 
   return {
     //   return functions here
+    signinWithGoogle: _signinWithGoogle
   };
 })();

@@ -10,7 +10,8 @@ function addListeners() {
 
     if (btnID == "signin-google") {
       //   this is for google signin
-      console.log("google");
+      FIREBASE_MODEL.signinWithGoogle();
+      //console.log("google");
     }
   });
 
