@@ -69,12 +69,14 @@ nav .login .signin-go {
 nav .login .signin-go .user-pic {
   height: 35px;
   width: 35px;
-  margin-right: 5px;
+  margin-right: 10px;
   background-color: antiquewhite;
+  background-size: cover;
 }
 
 nav .login .signin-go .user-name {
   color: #fff;
+  padding-right: 10px;
 }
 
 h3 {

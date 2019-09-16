@@ -12,26 +12,35 @@ function addListeners() {
       //   this is for google signin
       FIREBASE_MODEL.signinWithGoogle();
       //console.log("google");
+
+    }
+
+    if (btnID == "signout-google") {
+      //   this is for google signout
+      FIREBASE_MODEL.signOut();
+      //console.log("google");
     }
   });
 
   $("#suSubmit").click(function(e) {
     e.preventDefault();
     e.preventDefault();
-    let fName = $("sufName").val();
-    let lName = $("sulName").val();
-    let email = $("suEmail").val();
-    let pw = $("suPassword").val();
+    let fName = $("#sufName").val();
+    let lName = $("#sulName").val();
+    let email = $("#suEmail").val();
+    let pw = $("#suPassword").val();
 
     // send it all to model
+    FIREBASE_MODEL.createAccount(email, pw, fName, lName);
   });
 
   $("#siSubmit").click(function(e) {
     e.preventDefault();
-    let email = $("siEmail").val();
-    let pw = $("siPassword").val();
+    let email = $("#siEmail").val();
+    let pw = $("#siPassword").val();
 
     // send it all to model
+    FIREBASE_MODEL.signInWithEP(email, pw);
   });
 }
 
