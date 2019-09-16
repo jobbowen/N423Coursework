@@ -35,7 +35,13 @@ var FIREBASE_MODEL = (function() {
       var errorMessage = error.message;
       console.log(errorCode + '' + errorMessage);
     }).then(function(res) {
-      console.log(res);
+      return firebase.firestore().collection('users').add({
+        displayName: fname + ' ' + lname,
+        email: email,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      }).catch(function(error) {
+        console.error('Error writing new messag eto Firebase Database', error)
+      });
     });
   };
 
