@@ -3,7 +3,7 @@ include("../db_connection.php");
 
 function sanitize($item)
 {
-    global $conn;  //to use $link within the scope of this function, you must use the keyword "global"
+    global $conn;
     $item = html_entity_decode($item);
     $item = trim($item);
     $item = stripslashes($item);

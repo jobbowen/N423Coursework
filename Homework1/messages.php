@@ -7,8 +7,8 @@ $result = mysqli_query($conn, $query);
 
 $messages = Array();
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
-    if ($row["comment"] < ' ') {
-        $row["comment"] = "--No Message--";
+    if ($row["comment"] < '') {
+        $row["comment"] = "No Message Found";
     }
 
     $messages[] = Array("id" => $row["id"],
@@ -39,13 +39,12 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
         }
         foreach ($messages as $message) {
             echo '	<div class="message">
-								<div class="messageHeader">'
-                . $message["timestamp"] . ' <span><br>' . $message["firstName"] . ' ' . $message["lastName"] . '<br>' . $message["email"] . '</span>
-								</div>
-								<b><div class="messageComment">' . $message["comment"] . '</div></b>
-								<a class="messageLink" href="mailto:' . $message["email"] . '">Reply</a>
-							</div><br><br>
-							';
+                <div class="messageHeader">' . $message["timestamp"] . ' <span><br>' . $message["firstName"] . ' ' . $message["lastName"] . '<br>' . $message["email"] . '</span></div>
+				<b><div class="messageComment">' . $message["comment"] . '</div></b>
+				<a class="messageLink" href="mailto:' . $message["email"] . '">Reply</a>
+				</div>
+				<br>
+				<br>';
         }
         ?>
 </div>
