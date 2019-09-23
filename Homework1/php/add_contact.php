@@ -45,7 +45,6 @@ if (mysqli_affected_rows($conn) == 1) {
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Confirmation</title>
     <link rel="stylesheet" href="../css/styles.css"/>
 </head>
@@ -54,11 +53,9 @@ if (mysqli_affected_rows($conn) == 1) {
 <div id="messageBody">
     <?php
     if ($success) {
-        echo '
-                            <p>Thanks for submitting your feedback.</p>';
+        echo '<p>Thanks for submitting your feedback.</p>';
     } else {
-        echo '
-                            <p>An error has occurred. Please contact an administrator.</p>';
+        echo '<p>An error has occurred. Please contact an administrator.</p>';
     }
     ?>
 </div>
