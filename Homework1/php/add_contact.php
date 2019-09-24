@@ -1,8 +1,7 @@
 <?php
 include("../db_connection.php");
 
-function sanitize($item)
-{
+function sanitize($item) {
     global $conn;
     $item = html_entity_decode($item);
     $item = trim($item);

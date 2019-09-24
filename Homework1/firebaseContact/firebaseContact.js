@@ -1,5 +1,6 @@
 //Firebase collection
-let contactReference = firebase.database().ref();
+let ref = firebase.database().ref('contacts');
+getData();
 
 
 //Listener for form submission
@@ -16,7 +17,7 @@ function submitForm(e) {
     let comment = getInputValues('comment');
 
     //Save contacts
-    saveContacts(firstName, lastName, email, comment);
+    saveData(firstName, lastName, email, comment);
 
     //Show Confirmation
     document.getElementById('alert').style.display = 'block';
@@ -24,7 +25,7 @@ function submitForm(e) {
     //Hide Confirmation
     setTimeout(function () {
             document.getElementById('alert').style.display = 'none';
-        }, 40000);
+        }, 10000);
 
     //Clear form
     document.getElementById('contactForm').reset();
@@ -36,12 +37,54 @@ function getInputValues(id) {
 }
 
 //Save contacts to firebase
-function saveContacts(firstName, lastName, email, comment) {
-    let newContactReference = contactReference.push();
-    newContactReference.set({
+function saveData(firstName, lastName, email, comment) {
+    let data = {
         firstName: firstName,
         lastName: lastName,
         email: email,
         comment: comment
-    });
+    };
+    ref.push(data);
+}
+
+function getData() {
+    ref.on('value', gotData, errorData);
+
+    function gotData(data) {
+        let contacts = data.val();
+        let keys = Object.keys(contacts);
+
+        for (var i = 0; i < keys.length; i++) {
+            let k = keys[i];
+            let firstName = contacts[k].firstName;
+            let lastName = contacts[k].lastName;
+            let email = contacts[k].email;
+            let comment = contacts[k].comment;
+
+            let messageContainerFire = document.createElement('div');
+            messageContainerFire.setAttribute("id", "messageContainerFire");
+            document.querySelector("#formWrapperFire").appendChild(messageContainerFire);
+
+            let message = document.createElement('div');
+            message.setAttribute("id", "message");
+            document.querySelector("#messageContainerFire").appendChild(message);
+
+            let messageHeader = document.createElement('div');
+            messageHeader.setAttribute("id", "messageHeader");
+            messageHeader.innerHTML = firstName + " " + lastName + "<br>" + email;
+            document.querySelector("#message").appendChild(messageHeader);
+
+            let messageComment = document.createElement('div');
+            messageHeader.setAttribute("id", "messageComment");
+            messageComment.innerHTML = comment;
+            messageComment.setAttribute("style", "font-weight: bold; padding: 5px; word-break: break-all; border-bottom: 2px solid #000000;");
+            document.querySelector("#message").append(messageComment);
+        }
+    }
+
+    function errorData(err) {
+        console.log("Error");
+        console.log(err);
+    }
+
 }

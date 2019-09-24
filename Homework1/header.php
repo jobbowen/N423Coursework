@@ -8,5 +8,5 @@
     <a href="contact.php" class="active">Contact PHP</a>
     <a href="firebaseContact/contact.php">Contact Firebase</a>
     <a href="messages.php" class="active">Messages PHP</a>
-
+    <a href="firebaseContact/messagesFirebase.php">Messages Firebase</a>
 </div>

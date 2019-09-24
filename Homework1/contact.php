@@ -33,7 +33,7 @@
             </div>
 
             <div class="inputs">
-                <input id="submitContact" type="submit" />
+                <input id="submitContact" type="submit"/>
             </div>
         </form>
 </div>
