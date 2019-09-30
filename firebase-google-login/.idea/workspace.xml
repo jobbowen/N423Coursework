@@ -20,7 +20,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/firebase-google-login" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -58,6 +58,7 @@
       <workItem from="1569120839556" duration="68000" />
       <workItem from="1569122431595" duration="847000" />
       <workItem from="1569278183135" duration="685000" />
+      <workItem from="1569603196231" duration="400000" />
     </task>
     <servers />
   </component>

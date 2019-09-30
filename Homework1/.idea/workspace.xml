@@ -31,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/GitHub/N423Coursework/firebase-google-login" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../N413_Conference_Login" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -82,7 +82,16 @@
       <workItem from="1569250678320" duration="835000" />
       <workItem from="1569251708376" duration="655000" />
       <workItem from="1569265411930" duration="4031000" />
-      <workItem from="1569277918602" duration="13666000" />
+      <workItem from="1569277918602" duration="13738000" />
+      <workItem from="1569346357886" duration="1591000" />
+      <workItem from="1569420490196" duration="70000" />
+      <workItem from="1569530241770" duration="528000" />
+      <workItem from="1569598608316" duration="14353000" />
+      <workItem from="1569646131936" duration="5191000" />
+      <workItem from="1569688674591" duration="880000" />
+      <workItem from="1569855254868" duration="3689000" />
+      <workItem from="1569860970642" duration="267000" />
+      <workItem from="1569861292795" duration="141000" />
     </task>
     <servers />
   </component>
@@ -108,7 +117,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/firebaseContact/firebaseContact.js</url>
           <line>52</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

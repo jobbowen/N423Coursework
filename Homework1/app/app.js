@@ -1,7 +1,7 @@
 function displaySpeakers () {
     $.getJSON('data/data.json', function (result) {
         //success one
-        console.log(result.lists);
+        //console.log(result.lists);
         let listArray= result.lists;
 
         $.each(listArray, function (index, listName) {
