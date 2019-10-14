@@ -46,3 +46,29 @@ loginUser.addEventListener('submit', (e) => {
     })
 
 });
+
+//Google sign in
+googleSignIn = () => {
+    base_provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(base_provider).then(function (result) {
+        console.log("Success. Google linked");
+    }).catch(function (err) {
+        console.log(err);
+        console.log("Failed to do");
+    })
+};
+
+//Password reset
+let resetPassword = document.querySelector('#passwordReset');
+resetPassword.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let emailReset = resetPassword['resetEmail'].value;
+
+    auth.sendPasswordResetEmail(emailReset).then(function (result) {
+        alert('Email sent')
+    }).catch(function (err) {
+        console.log(err);
+        alert('Failed')
+    })
+});

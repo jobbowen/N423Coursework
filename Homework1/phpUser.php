@@ -25,6 +25,11 @@
 
     <h3 style="margin-top: 20px">SIGN IN</h3>
     <?php
+    if (isset($_GET["newpwd"])) {
+        if ($_GET["newpwd"] == "passwordupdated") {
+            echo '<p>Your password has been reset.</p>';
+        }
+    }
     if (isset($_SESSION['id'])) {
         echo '<form action="includes/logout.php" method="post">
             <button type="submit" name="logout">Logout</button>
@@ -38,7 +43,8 @@
         Password:
         <input id="siPassword" type="password" name="password" placeholder="Password"/>
         <button type="submit" name="login" id="login">Login</button>
-    </form>';
+    </form>
+    <a style="color: #000000" href="reset-password.php">Forgot Password?</a>';
     }
     ?>
 </div>

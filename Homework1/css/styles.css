@@ -209,3 +209,7 @@ img {
     color: #00959e;
     border-bottom: 2px solid #00959e;
 }
+
+.googleSignIn {
+    margin-top: 50px;
+}

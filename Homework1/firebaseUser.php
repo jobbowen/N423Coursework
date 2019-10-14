@@ -26,6 +26,14 @@
         <input id="siPassword" type="password" name="password" />
         <input type="submit" id="siSubmit" value="Sign In" />
     </form>
+
+    <button class="googleSignIn" onclick="googleSignIn()">Sign in with Google</button>
+
+    <form id="passwordReset">
+        <input id="resetEmail" type="email" placeholder="Enter email to reset password">
+        <input type="submit" class="resetPassword" value="Reset Password">
+    </form>
+
 </div>
 
 <div style=" margin-top: 50px;" class="status"></div>
